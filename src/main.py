@@ -23,7 +23,7 @@ def main():
         stop_event.set()
         downloader.join(timeout=5)
         monitor.join(timeout=5)
-        print("Aplicación finalizada.")
+        print("Aplicación Terminada ..")
 
 if __name__ == "__main__":
     main()

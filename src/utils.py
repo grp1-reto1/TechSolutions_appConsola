@@ -8,7 +8,7 @@ CONFIG_PATH = "config.json"
 def load_config() -> dict:
     """Carga el archivo config.json o crea uno por defecto."""
     default = {
-        "api_url": "http://127.0.0.1:5000/api/contactos",
+        "api_url": "https://jsonplaceholder.typicode.com/users",
         "download_interval_minutes": 5,
         "data_folder": "./descargas",
         "last_ids_file": "./descargas/last_ids.json"

@@ -1,0 +1,6 @@
+{
+    "api_url": "https://api-ts-grupo1.duckdns.org/api?table=res.partner",
+    "download_interval_minutes": 5,
+    "data_folder": "./descargas",
+    "last_ids_file": "./descargas/last_ids.json"
+}

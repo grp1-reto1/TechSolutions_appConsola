@@ -98,16 +98,16 @@ def menu_loop(cfg: dict, shared_files: dict, stop_event):
                 continue
             sel = input("Selecciona número o 'c' para cancelar: ").strip().lower()
             if sel == 'c':
-                print("Operación cancelada.")
+                print("Operación cancelada")
                 continue
             try:
                 idx = int(sel) - 1
                 if 0 <= idx < len(files):
                     view_file(files[idx])
                 else:
-                    print("Selección fuera de rango.")
+                    print("Selección fuera de rango")
             except ValueError:
-                print("Entrada inválida.")
+                print("Entrada inválida")
 
         elif op == "3":
             files = list_files(shared_files)
@@ -115,16 +115,16 @@ def menu_loop(cfg: dict, shared_files: dict, stop_event):
                 continue
             sel = input("Selecciona número o 'c' para cancelar: ").strip().lower()
             if sel == 'c':
-                print("Operación cancelada.")
+                print("Operación cancelada")
                 continue
             try:
                 idx = int(sel) - 1
                 if 0 <= idx < len(files):
                     edit_file(files[idx])
                 else:
-                    print("Selección fuera de rango.")
+                    print("Selección fuera de rango")
             except ValueError:
-                print("Entrada inválida.")
+                print("Entrada inválida")
 
         elif op == "4":
             files = list_files(shared_files)
@@ -132,21 +132,21 @@ def menu_loop(cfg: dict, shared_files: dict, stop_event):
                 continue
             sel = input("Selecciona número o 'c' para cancelar: ").strip().lower()
             if sel == 'c':
-                print("Operación cancelada.")
+                print("Operación cancelada")
                 continue
             try:
                 idx = int(sel) - 1
                 if 0 <= idx < len(files):
                     delete_file(files[idx], shared_files)
                 else:
-                    print("Selección fuera de rango.")
+                    print("Selección fuera de rango")
             except ValueError:
-                print("Entrada inválida.")
+                print("Entrada inválida")
 
         elif op == "5":
             val = input("Nuevo intervalo (minutos) o 'c' para cancelar: ").strip().lower()
             if val == 'c':
-                print("Cambio cancelado.")
+                print("Cambio cancelado")
                 continue
             try:
                 v = int(val)
@@ -157,17 +157,17 @@ def menu_loop(cfg: dict, shared_files: dict, stop_event):
                 save_config(cfg)
                 print(f"Intervalo actualizado a {v} minutos.")
             except ValueError:
-                print("Entrada inválida.")
+                print("Entrada inválida")
 
         elif op == "6":
             new = input("Nueva URL o 'c' para cancelar: ").strip()
             if new.lower() == 'c':
-                print("Cambio cancelado.")
+                print("Cambio cancelado")
                 continue
             if new:
                 cfg["api_url"] = new
                 save_config(cfg)
-                print("URL actualizada.")
+                print("URL actualizada")
 
         elif op == "7":
             ping_api(cfg["api_url"])
@@ -177,4 +177,4 @@ def menu_loop(cfg: dict, shared_files: dict, stop_event):
             print("Saliendo...")
 
         else:
-            print("Opción no válida.")
+            print("Opción no válida")
